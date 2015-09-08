@@ -27,7 +27,7 @@ namespace Diablo3APIDemo
         private void btnSendCharacterRequest_Click(object sender, RoutedEventArgs e)
         {
             tbJsonResponse.Clear();
-            CharacterInfo charInfoResponse = DiabloService.GetCharacterInfo(RequestParameters.REGIONS.EU, tbBattleTag.Text, "42014051", "en_GB", tbApiKey.Text);
+            CharacterInfo charInfoResponse = DiabloService.GetCharacterInfo(RequestParameters.REGIONS.EU, tbBattleTag.Text, tbHeroId.Text, "en_GB", tbApiKey.Text);
             string output = JsonConvert.SerializeObject(charInfoResponse, Formatting.Indented, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
             tbJsonResponse.Text = output;
         }
