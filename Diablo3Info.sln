@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diablo3Info", "Diablo3Info\Diablo3Info.csproj", "{BBADE956-ACCC-41BD-9516-D58037031C61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diablo3InfoClasses", "Diablo3InfoClasses\Diablo3InfoClasses.csproj", "{22EB80E7-44FA-4B76-A80F-87A92B11E4D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diablo3APIDemo", "Diablo3APIDemo\Diablo3APIDemo.csproj", "{8AB7140A-6116-4375-990B-13E7BEFA5CF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBADE956-ACCC-41BD-9516-D58037031C61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBADE956-ACCC-41BD-9516-D58037031C61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBADE956-ACCC-41BD-9516-D58037031C61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBADE956-ACCC-41BD-9516-D58037031C61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22EB80E7-44FA-4B76-A80F-87A92B11E4D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22EB80E7-44FA-4B76-A80F-87A92B11E4D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22EB80E7-44FA-4B76-A80F-87A92B11E4D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22EB80E7-44FA-4B76-A80F-87A92B11E4D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AB7140A-6116-4375-990B-13E7BEFA5CF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AB7140A-6116-4375-990B-13E7BEFA5CF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AB7140A-6116-4375-990B-13E7BEFA5CF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AB7140A-6116-4375-990B-13E7BEFA5CF0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
