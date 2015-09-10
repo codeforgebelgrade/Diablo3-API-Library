@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Codeforge.Diablo3Info
 {
+    /// <summary>
+    /// Contains request parameters used for making API calls
+    /// </summary>
     public static class RequestParameters
     {
         //personal API key
