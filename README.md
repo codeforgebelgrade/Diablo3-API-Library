@@ -1,5 +1,5 @@
 # Diablo3 API .NET Library
-C# library that retrieves data from Blizzard Diablo 3 API. If you are making your own .NET Diablo 3 application, you can simply import this library and use it to fetch the data - basically, you can focus on your application and let the library take care of the API and the data. I made this for my own Diablo 3 application for Windows Phone - unfortunately, I am not sure if I am going to continue working on that app, but this might be helpful for someone else working on similar project.   
+C# library that retrieves data from Blizzard Diablo 3 Community API. If you are making your own .NET Diablo 3 application, you can simply import this library and use it to fetch the data - basically, you can focus on your application and let the library take care of the API and the data. I made this for my own Diablo 3 application for Windows Phone - unfortunately, I am not sure if I am going to continue working on that app, but this might be helpful for someone else working on similar project.   
 
 # How it works
 
