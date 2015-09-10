@@ -15,6 +15,7 @@ namespace Codeforge.Diablo3Info
         public static string APIKEY = "&apikey=";
         public static string LOCALE = "?locale=";
 
+        //list of available followers
         public enum FOLLOWERS
         {
             TEMPLAR,
@@ -22,6 +23,7 @@ namespace Codeforge.Diablo3Info
             SCOUNDREL
         }
 
+        //list of available artisans
         public enum ARTISANS
         {
             MYSTIC,
@@ -29,6 +31,7 @@ namespace Codeforge.Diablo3Info
             JEWELER
         }
 
+        //list of available regions
         public enum REGIONS
         {
             EU,
