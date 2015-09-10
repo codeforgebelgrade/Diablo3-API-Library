@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace Codeforge.Diablo3Info
 {
+    /// <summary>
+    /// Contains request parameters used for making API calls
+    /// </summary>
     public static class RequestParameters
     {
         //personal API key
         public static string APIKEY = "&apikey=";
         public static string LOCALE = "?locale=";
 
+        //list of available followers
         public enum FOLLOWERS
         {
             TEMPLAR,
@@ -19,6 +23,7 @@ namespace Codeforge.Diablo3Info
             SCOUNDREL
         }
 
+        //list of available artisans
         public enum ARTISANS
         {
             MYSTIC,
@@ -26,6 +31,7 @@ namespace Codeforge.Diablo3Info
             JEWELER
         }
 
+        //list of available regions
         public enum REGIONS
         {
             EU,
