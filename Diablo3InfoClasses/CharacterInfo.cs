@@ -18,17 +18,19 @@ namespace Codeforge.Diablo3InfoClasses
         [DataMember(Name = "reason")]
         public String Reason { get; set; }
 
-        [DataMember(Name = "id")]
+        [DataMember(Name = "id", Order = 0)]
         public int Id { get; set; }
-        [DataMember(Name = "name")]
+        [DataMember(Name = "name", Order = 1)]
         public string Name { get; set; }
-        [DataMember(Name = "class")]
+        [DataMember(Name = "class", Order = 2)]
         public string @Class { get; set; }
-        [DataMember(Name = "gender")]
+        [DataMember(Name = "gender", Order = 3)]
         public int? Gender { get; set; }
-        [DataMember(Name = "level")]
+        [DataMember(Name = "level", Order = 4)]
         public int? Level { get; set; }
-        [DataMember(Name = "paragonLevel")]
+        [DataMember(Name = "kills", Order = 5)]
+        public Kills KillsInfo { get; set; }
+        [DataMember(Name = "paragonLevel", Order = 6)]
         public int? ParagonLevel { get; set; }
         [DataMember(Name = "hardcore")]
         public bool? Hardcore { get; set; }
@@ -44,8 +46,6 @@ namespace Codeforge.Diablo3InfoClasses
         public Followers FollowersInfo { get; set; }
         [DataMember(Name = "stats")]
         public Stats StatsInfo { get; set; }
-        [DataMember(Name = "kills")]
-        public Kills KillsInfo { get; set; }
         [DataMember(Name = "progression")]
         public Progression ProgressionInfo { get; set; }
         [DataMember(Name = "dead")]
