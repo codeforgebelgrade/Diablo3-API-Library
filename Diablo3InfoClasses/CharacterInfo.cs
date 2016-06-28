@@ -12,7 +12,7 @@ namespace Codeforge.Diablo3InfoClasses
     {
         // The following properties (Code and Reason) are used only if the character is not found.
         // If the parameters used for this request are in proper format, but their values are wrong,
-        // the service will still responde with 200OK, but the response will contain only these two fields.
+        // the service will still respond with 200OK, but the response will contain only these two fields.
         [DataMember(Name = "code")]
         public String Code { get; set; }
         [DataMember(Name = "reason")]
@@ -137,18 +137,26 @@ namespace Codeforge.Diablo3InfoClasses
         }
 
         [DataContract]
-        public class ItemProduced
+        public class Item : BasicItem
         {
-            [DataMember(Name = "id")]
-            public string Id { get; set; }
-            [DataMember(Name = "name")]
-            public string Name { get; set; }
-            [DataMember(Name = "icon")]
-            public string Icon { get; set; }
-            [DataMember(Name = "displayColor")]
-            public string DisplayColor { get; set; }
-            [DataMember(Name = "tooltipParams")]
-            public string TooltipParams { get; set; }
+            [DataMember(Name = "recipe")]
+            public Recipe Recipe { get; set; }
+            [DataMember(Name = "transmogItem")]
+            public Item TransmogItem { get; set; }
+            [DataMember(Name = "craftedBy")]
+            public List<CraftedBy> CraftedBy { get; set; }
+        }
+
+        [DataContract]
+        public class ItemProduced : BasicItem
+        {
+            
+        }
+
+        [DataContract]
+        public class LegendaryPower : BasicItem
+        {
+
         }
 
         [DataContract]
@@ -166,42 +174,6 @@ namespace Codeforge.Diablo3InfoClasses
             public List<Reagent> Reagents { get; set; }
             [DataMember(Name = "itemProduced")]
             public ItemProduced ItemProduced { get; set; }
-        }
-
-        [DataContract]
-        public class LegendaryPower
-        {
-            [DataMember(Name = "id")]
-            public string Id { get; set; }
-            [DataMember(Name = "name")]
-            public string Name { get; set; }
-            [DataMember(Name = "icon")]
-            public string Icon { get; set; }
-            [DataMember(Name = "displayColor")]
-            public string DisplayColor { get; set; }
-            [DataMember(Name = "tooltipParams")]
-            public string TooltipParams { get; set; }
-        }
-
-        [DataContract]
-        public class Item
-        {
-            [DataMember(Name = "id")]
-            public string Id { get; set; }
-            [DataMember(Name = "name")]
-            public string Name { get; set; }
-            [DataMember(Name = "icon")]
-            public string Icon { get; set; }
-            [DataMember(Name = "displayColor")]
-            public string DisplayColor { get; set; }
-            [DataMember(Name = "tooltipParams")]
-            public string TooltipParams { get; set; }
-            [DataMember(Name = "recipe")]
-            public Recipe Recipe { get; set; }
-            [DataMember(Name = "transmogItem")]
-            public Item TransmogItem { get; set; }
-            [DataMember(Name = "craftedBy")]
-            public List<CraftedBy> CraftedBy { get; set; }
         }
 
         [DataContract]
