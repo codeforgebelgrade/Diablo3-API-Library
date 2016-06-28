@@ -52,6 +52,8 @@ namespace Codeforge.Diablo3InfoClasses
         public bool? Dead { get; set; }
         [DataMember(Name = "invalid_name_last_updated")]
         public int? InvalidNameLastUpdated { get; set; }
+        [DataMember(Name = "legendaryPowers")]
+        public LegendaryPower[] legendaryPowers { get; set; }
 
         [DataContract]
         public class Skills
@@ -164,6 +166,21 @@ namespace Codeforge.Diablo3InfoClasses
             public List<Reagent> Reagents { get; set; }
             [DataMember(Name = "itemProduced")]
             public ItemProduced ItemProduced { get; set; }
+        }
+
+        [DataContract]
+        public class LegendaryPower
+        {
+            [DataMember(Name = "id")]
+            public string Id { get; set; }
+            [DataMember(Name = "name")]
+            public string Name { get; set; }
+            [DataMember(Name = "icon")]
+            public string Icon { get; set; }
+            [DataMember(Name = "displayColor")]
+            public string DisplayColor { get; set; }
+            [DataMember(Name = "tooltipParams")]
+            public string TooltipParams { get; set; }
         }
 
         [DataContract]
