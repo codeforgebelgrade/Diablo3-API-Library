@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ArtisanInfo.cs" />
     <Compile Include="BasicItem.cs" />
+    <Compile Include="BasicSkill.cs" />
     <Compile Include="CharacterInfo.cs" />
     <Compile Include="FollowerInfo.cs" />
     <Compile Include="ItemInfo.cs" />
