@@ -136,20 +136,9 @@ namespace Codeforge.Diablo3InfoClasses
         }
 
         [DataContract]
-        public class CraftedBy
+        public class CraftedBy : Recipe
         {
-            [DataMember(Name = "id")]
-            public string Id { get; set; }
-            [DataMember(Name = "slug")]
-            public string Slug { get; set; }
-            [DataMember(Name = "name")]
-            public string Name { get; set; }
-            [DataMember(Name = "cost")]
-            public int Cost { get; set; }
-            [DataMember(Name = "reagents")]
-            public List<Reagent> Reagents { get; set; }
-            [DataMember(Name = "itemProduced")]
-            public ItemProduced ItemProduced { get; set; }
+            
         }
 
         [DataContract]
