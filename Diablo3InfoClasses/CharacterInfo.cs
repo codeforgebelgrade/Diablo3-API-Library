@@ -32,28 +32,28 @@ namespace Codeforge.Diablo3InfoClasses
         public Kills KillsInfo { get; set; }
         [DataMember(Name = "paragonLevel", Order = 6)]
         public int? ParagonLevel { get; set; }
-        [DataMember(Name = "hardcore")]
+        [DataMember(Name = "hardcore", Order = 7)]
         public bool? Hardcore { get; set; }
-        [DataMember(Name = "seasonal")]
+        [DataMember(Name = "seasonal", Order = 8)]
         public bool? Seasonal { get; set; }
-        [DataMember(Name = "seasonCreated")]
+        [DataMember(Name = "seasonCreated", Order = 9)]
         public int? SeasonCreated { get; set; }
-        [DataMember(Name = "skills")]
+        [DataMember(Name = "skills", Order = 10)]
         public Skills SkillsInfo { get; set; }
-        [DataMember(Name = "items")]
+        [DataMember(Name = "items", Order = 11)]
         public Items ItemsInfo { get; set; }
-        [DataMember(Name = "followers")]
+        [DataMember(Name = "followers", Order = 12)]
         public Followers FollowersInfo { get; set; }
-        [DataMember(Name = "stats")]
-        public Stats StatsInfo { get; set; }
-        [DataMember(Name = "progression")]
-        public Progression ProgressionInfo { get; set; }
-        [DataMember(Name = "dead")]
-        public bool? Dead { get; set; }
-        [DataMember(Name = "invalid_name_last_updated")]
-        public int? InvalidNameLastUpdated { get; set; }
-        [DataMember(Name = "legendaryPowers")]
+        [DataMember(Name = "legendaryPowers", Order = 13)]
         public LegendaryPower[] legendaryPowers { get; set; }
+        [DataMember(Name = "stats", Order = 14)]
+        public Stats StatsInfo { get; set; }
+        [DataMember(Name = "progression", Order = 15)]
+        public Progression ProgressionInfo { get; set; }
+        [DataMember(Name = "dead", Order = 16)]
+        public bool? Dead { get; set; }
+        [DataMember(Name = "invalid_name_last_updated", Order = 17)]
+        public int? InvalidNameLastUpdated { get; set; }
 
         [DataContract]
         public class Skills
