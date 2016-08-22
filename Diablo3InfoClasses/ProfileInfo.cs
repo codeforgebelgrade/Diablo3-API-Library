@@ -212,6 +212,8 @@ namespace Codeforge.Diablo3InfoClasses
             public Season Season5 { get; set; }
             [DataMember(Name = "season6")]
             public Season Season6 { get; set; }
+            [DataMember(Name = "season7")]
+            public Season Season7 { get; set; }
         }
     }
 }
