@@ -8,6 +8,7 @@ namespace Diablo3APIDemo
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// This project serves simply as a demo project - an example showing how to use the library
+    /// The values used below are set to EU region and en_GB as locale
     /// </summary>
     public partial class MainWindow : Window
     {

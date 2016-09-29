@@ -12,45 +12,47 @@ namespace Codeforge.Diablo3InfoClasses
     {
         // The following properties (Code and Reason) are used only if the character is not found.
         // If the parameters used for this request are in proper format, but their values are wrong,
-        // the service will still responde with 200OK, but the response will contain only these two fields.
+        // the service will still respond with 200OK, but the response will contain only these two fields.
         [DataMember(Name = "code")]
         public String Code { get; set; }
         [DataMember(Name = "reason")]
         public String Reason { get; set; }
 
-        [DataMember(Name = "id")]
+        [DataMember(Name = "id", Order = 0)]
         public int Id { get; set; }
-        [DataMember(Name = "name")]
+        [DataMember(Name = "name", Order = 1)]
         public string Name { get; set; }
-        [DataMember(Name = "class")]
+        [DataMember(Name = "class", Order = 2)]
         public string @Class { get; set; }
-        [DataMember(Name = "gender")]
+        [DataMember(Name = "gender", Order = 3)]
         public int? Gender { get; set; }
-        [DataMember(Name = "level")]
+        [DataMember(Name = "level", Order = 4)]
         public int? Level { get; set; }
-        [DataMember(Name = "paragonLevel")]
-        public int? ParagonLevel { get; set; }
-        [DataMember(Name = "hardcore")]
-        public bool? Hardcore { get; set; }
-        [DataMember(Name = "seasonal")]
-        public bool? Seasonal { get; set; }
-        [DataMember(Name = "seasonCreated")]
-        public int? SeasonCreated { get; set; }
-        [DataMember(Name = "skills")]
-        public Skills SkillsInfo { get; set; }
-        [DataMember(Name = "items")]
-        public Items ItemsInfo { get; set; }
-        [DataMember(Name = "followers")]
-        public Followers FollowersInfo { get; set; }
-        [DataMember(Name = "stats")]
-        public Stats StatsInfo { get; set; }
-        [DataMember(Name = "kills")]
+        [DataMember(Name = "kills", Order = 5)]
         public Kills KillsInfo { get; set; }
-        [DataMember(Name = "progression")]
+        [DataMember(Name = "paragonLevel", Order = 6)]
+        public int? ParagonLevel { get; set; }
+        [DataMember(Name = "hardcore", Order = 7)]
+        public bool? Hardcore { get; set; }
+        [DataMember(Name = "seasonal", Order = 8)]
+        public bool? Seasonal { get; set; }
+        [DataMember(Name = "seasonCreated", Order = 9)]
+        public int? SeasonCreated { get; set; }
+        [DataMember(Name = "skills", Order = 10)]
+        public Skills SkillsInfo { get; set; }
+        [DataMember(Name = "items", Order = 11)]
+        public Items ItemsInfo { get; set; }
+        [DataMember(Name = "followers", Order = 12)]
+        public Followers FollowersInfo { get; set; }
+        [DataMember(Name = "legendaryPowers", Order = 13)]
+        public LegendaryPower[] legendaryPowers { get; set; }
+        [DataMember(Name = "stats", Order = 14)]
+        public Stats StatsInfo { get; set; }
+        [DataMember(Name = "progression", Order = 15)]
         public Progression ProgressionInfo { get; set; }
-        [DataMember(Name = "dead")]
+        [DataMember(Name = "dead", Order = 16)]
         public bool? Dead { get; set; }
-        [DataMember(Name = "invalid_name_last_updated")]
+        [DataMember(Name = "invalid_name_last_updated", Order = 17)]
         public int? InvalidNameLastUpdated { get; set; }
 
         [DataContract]
@@ -62,30 +64,6 @@ namespace Codeforge.Diablo3InfoClasses
             public List<Passive> Passive { get; set; }
         }
 
-        [DataContract]
-        public class Skill
-        {
-            [DataMember(Name = "slug")]
-            public string slug { get; set; }
-            [DataMember(Name = "name")]
-            public string name { get; set; }
-            [DataMember(Name = "icon")]
-            public string icon { get; set; }
-            [DataMember(Name = "level")]
-            public int level { get; set; }
-            [DataMember(Name = "categorySlug")]
-            public string categorySlug { get; set; }
-            [DataMember(Name = "tooltipUrl")]
-            public string tooltipUrl { get; set; }
-            [DataMember(Name = "description")]
-            public string description { get; set; }
-            [DataMember(Name = "flavor")]
-            public string flavor { get; set; }
-            [DataMember(Name = "simpleDescription")]
-            public string simpleDescription { get; set; }
-            [DataMember(Name = "skillCalcId")]
-            public string skillCalcId { get; set; }
-        }
         [DataContract]
         public class Rune
         {
@@ -113,7 +91,7 @@ namespace Codeforge.Diablo3InfoClasses
         public class Active
         {
             [DataMember(Name = "skill")]
-            public Skill Skill { get; set; }
+            public BasicSkill Skill { get; set; }
             [DataMember(Name = "rune")]
             public Rune Rune { get; set; }
         }
@@ -122,7 +100,7 @@ namespace Codeforge.Diablo3InfoClasses
         public class Passive
         {
             [DataMember(Name = "skill")]
-            public Skill Skill;
+            public BasicSkill Skill;
         }
 
         [DataContract]
@@ -135,56 +113,32 @@ namespace Codeforge.Diablo3InfoClasses
         }
 
         [DataContract]
-        public class ItemProduced
+        public class Item : BasicItem
         {
-            [DataMember(Name = "id")]
-            public string Id { get; set; }
-            [DataMember(Name = "name")]
-            public string Name { get; set; }
-            [DataMember(Name = "icon")]
-            public string Icon { get; set; }
-            [DataMember(Name = "displayColor")]
-            public string DisplayColor { get; set; }
-            [DataMember(Name = "tooltipParams")]
-            public string TooltipParams { get; set; }
-        }
-
-        [DataContract]
-        public class CraftedBy
-        {
-            [DataMember(Name = "id")]
-            public string Id { get; set; }
-            [DataMember(Name = "slug")]
-            public string Slug { get; set; }
-            [DataMember(Name = "name")]
-            public string Name { get; set; }
-            [DataMember(Name = "cost")]
-            public int Cost { get; set; }
-            [DataMember(Name = "reagents")]
-            public List<Reagent> Reagents { get; set; }
-            [DataMember(Name = "itemProduced")]
-            public ItemProduced ItemProduced { get; set; }
-        }
-
-        [DataContract]
-        public class Item
-        {
-            [DataMember(Name = "id")]
-            public string Id { get; set; }
-            [DataMember(Name = "name")]
-            public string Name { get; set; }
-            [DataMember(Name = "icon")]
-            public string Icon { get; set; }
-            [DataMember(Name = "displayColor")]
-            public string DisplayColor { get; set; }
-            [DataMember(Name = "tooltipParams")]
-            public string TooltipParams { get; set; }
             [DataMember(Name = "recipe")]
             public Recipe Recipe { get; set; }
             [DataMember(Name = "transmogItem")]
             public Item TransmogItem { get; set; }
             [DataMember(Name = "craftedBy")]
             public List<CraftedBy> CraftedBy { get; set; }
+        }
+
+        [DataContract]
+        public class ItemProduced : BasicItem
+        {
+            
+        }
+
+        [DataContract]
+        public class LegendaryPower : BasicItem
+        {
+
+        }
+
+        [DataContract]
+        public class CraftedBy : Recipe
+        {
+            
         }
 
         [DataContract]
