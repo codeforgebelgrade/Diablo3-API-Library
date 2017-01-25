@@ -110,7 +110,7 @@ namespace Codeforge.Diablo3Info
 
         public void GetItemInfo(RequestParameters.REGIONS region, string battleTag, string itemString, string apiKeyValue)
         {
-
+            //TODO: try to recreate the classes that represent items
         }
     }
 }
